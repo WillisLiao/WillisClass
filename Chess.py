@@ -36,9 +36,9 @@ class Chess:
        print(" name:{}\t mass:{}\t color:{}\t value:{}\t startingPosition:{}\t".format(self.name, self.mass, self.color, self.value, self.startingPosi))
     
 
-chess1 = Chess('king', '16g','white', '10', 'e1')   #對應上面的參數，self不用
-chess2 = Chess('rook', '15g','black', '7', 'a8, h8') 
-chess3 = Chess('knight', '15g','white', '5', 'b1, g1') 
+chess1 = Chess('帥', '16g','red', '10', 'e1')   #對應上面的參數，self不用
+chess2 = Chess('車', '15g','black', '7', 'a8, h8') 
+chess3 = Chess('馬', '15g','red', '5', 'b1, g1') 
 chess1.showInfo()
 chess2.showInfo()
 chess3.showInfo()
