@@ -1,21 +1,21 @@
 class Person:
     def __init__(self, name, ID , height, weight, gender, birthday ):
         self.name = name
-        self.__ID = ID
+        self.ID = ID
         self.height = height
         self.weight = weight
         self.gender = gender
-        self.__birthday = birthday
+        self.birthday = birthday
   
     def setName(self, newName):
         self.name = newName
     def getName(self):
         return print(self.name)
 
-    def __setID(self, newID):
-        self.__ID = newID
+    def setID(self, newID):
+        self.ID = newID
     def getID(self):
-        return print(self.__ID)
+        return print(self.ID)
 
     def setHeight(self,newHeight):
         self.height = newHeight
@@ -32,17 +32,19 @@ class Person:
     def getGender(self):
         return print(self.gender)
 
-    def __setBirthday(self, newBirthday):
-        self.__birthday = newBirthday
+    def setBirthday(self, newBirthday):
+        self.birthday = newBirthday
     def getBirthday(self):
-        return print(self.__birthday)
+        return print(self.birthday)
         
         
     def showInfo(self):
-       print(" name:{}\n ID:{}\n height:{}\n weight:{}\n gender:{}\n birthday:{}".format(self.name, self.__ID, self.height, self.weight, self.gender, self.__birthday))
+       print(" name:{}\n ID:{}\n height:{}\n weight:{}\n gender:{}\n birthday:{}".format(self.name, self.ID, self.height, self.weight, self.gender, self.birthday))
     def getStdBMI(self):
         print("BMI:",int(self.weight)/((int(self.height)*(0.01))**2))
-
+    
+    id = (getID, setID)
+    bd = (getBirthday, setBirthday)
 person1 = Person('Willis', 'F130374671','186', '69', 'male','0414')   #對應上面的參數，self不用
 
 person1.showInfo()
@@ -51,3 +53,5 @@ person1.setGender('Gorilla')
 person1.getGender()
 person1.setBirthday('0918')
 person1.getBirthday()
+person1.id = 'F999999'
+print(person1.id)
