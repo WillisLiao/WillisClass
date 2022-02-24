@@ -43,8 +43,8 @@ class Person:
     def getStdBMI(self):
         print("BMI:",int(self.weight)/((int(self.height)*(0.01))**2))
     
-    id = (getID, setID)
-    bd = (getBirthday, setBirthday)
+    id = property(getID, setID)
+    bd = property(getBirthday, setBirthday)
 person1 = Person('Willis', 'F130374671','186', '69', 'male','0414')   #對應上面的參數，self不用
 
 person1.showInfo()
