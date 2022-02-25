@@ -53,7 +53,7 @@ class Person:
 person1=Person(input(''), input(''), input(''), input(''), input(''), input(''), input(''), input('') )
 class Student(Person):
     def __init__(self, name, ID, height, weight, gender, address, email, phone, subject, credit, score ):
-        super().__init__(name, id, height, weight, gender, address, email, phone, subject, credit, score)
+        super().__init__(name, ID, height, weight, gender, address, email, phone, subject, credit, score)
         self.subject = subject
         self.credit = credit
         self.score = score
@@ -74,11 +74,11 @@ class Student(Person):
     
 
 class Teacher(Person):
-    def __init__(self, name, ID, height, weight, gender, address, email, phone, subject, credit, score ):
-        super().__init__(name, id, height, weight, gender, address, email, phone, subject, credit, score)
-        self.subject = subject
-        self.credit = credit
-        self.score = score
+    def __init__(self, name, ID, height, weight, gender, address, email, phone, degree, major, web_address ):
+        super().__init__(name, ID, height, weight, gender, address, email, phone, degree, major, web_address)
+        self.degree = degree
+        self.major = major
+        self.web_address = web_address
 
 
 
