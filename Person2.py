@@ -4,14 +4,14 @@ from tkinter import *
 class Person:
     def __init__(self, name, ID , height, weight, gender, address, email, phone ):
         self.name = name
-        self.__ID = ID
+        self.ID = ID 
         self.height = height
         self.weight = weight
         self.gender = gender
         self.address = address
         self.email = email
-        self.__phone = phone
-  
+        self.phone = phone
+    
     def setName(self, newName):
         self.name = newName
     def getName(self):
@@ -52,8 +52,20 @@ class Person:
     def getPhone(self):
         return self.__phone  
     def StudentInfo(self):
-       print(" name:{}\n ID:{}\n height:{}\n weight:{}\n gender:{}\n address:{}\n email:{}\n phone:{}".format(self.name, self.ID, self.height, self.weight, self.gender, self.birthday))
-person1=Person(input(''), input(''), input(''), input(''), input(''), input(''), input(''), input('') )
+       print(" name:{}\n ID:{}\n height:{}\n weight:{}\n gender:{}\n address:{}\n email:{}\n phone:{}".format(self.name, self.ID, self.height, self.weight, self.gender, self.address, self.email, self.phone))
+
+# creating list       
+list = [] 
+  
+# appending instances to list 
+list.append( Person("Willis", "D1047316", "186", "69", "male", "FengChia", "willisrain04@gmail.com", "0966931862" ) )
+list.append( Person("Aaron", "D1047316", "186", "69", "male", "FengChia", "willisrain04@gmail.com", "0966931862") )
+list.append( Person("XMY", "D1047316", "186", "69", "male", "FengChia", "willisrain04@gmail.com", "0966931862") )
+
+def ShowInfoList():
+    for obj in list:
+        print( obj.name, obj.ID, obj.height, obj.weight, obj.gender, obj.address, obj.email, obj.phone, sep =' ' )
+
 class Student(Person):
     def __init__(self, name, ID, height, weight, gender, address, email, phone, subject, credit, score ):
         super().__init__(name, ID, height, weight, gender, address, email, phone, subject, credit, score)
