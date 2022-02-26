@@ -53,6 +53,8 @@ def openNewWindow():
         text6 = entry6.get()
         text7 = entry7.get()
         text8 = entry8.get()
+        list.append( Person(text, text2, text3, text4, text5, text6, text7, text8) )
+
         print(text)
         return None
     Button(newWindow1, text="Add", command=button_command).pack()
