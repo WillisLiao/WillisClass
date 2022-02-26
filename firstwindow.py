@@ -19,27 +19,27 @@ def openNewWindow():
                  command = lambda: newWindowClose(newWindow1))
     btn.pack(pady = 5)
 
-    L1 = Label(root, text="name\nID\nheight\nweight\ngender\nemail\nphone")
+    L1 = Label(newWindow1, text="name\nID\nheight\nweight\ngender\nemail\nphone")
     L1.pack()
-    entry1 = Entry(root, width = 20)
+    entry1 = Entry(newWindow1, width = 20)
     entry1.pack()
 
-    entry2 = Entry(root, width = 20)
+    entry2 = Entry(newWindow1, width = 20)
     entry2.pack()
 
-    entry3 = Entry(root, width = 20)
+    entry3 = Entry(newWindow1, width = 20)
     entry3.pack()
 
-    entry4 = Entry(root, width = 20)
+    entry4 = Entry(newWindow1, width = 20)
     entry4.pack()
 
-    entry5 = Entry(root, width = 20)
+    entry5 = Entry(newWindow1, width = 20)
     entry5.pack()
 
-    entry6 = Entry(root, width = 20)
+    entry6 = Entry(newWindow1, width = 20)
     entry6.pack()
 
-    entry7 = Entry(root, width = 20)
+    entry7 = Entry(newWindow1, width = 20)
     entry7.pack()
 
     def button_command():
