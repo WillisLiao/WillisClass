@@ -55,7 +55,7 @@ def openNewWindow():
         text8 = entry8.get()
         list.append( Person(text, text2, text3, text4, text5, text6, text7, text8) )
 
-        print("added successfully!")
+        print("Added successfully!\nClose this window and click Show person list")
         return None
     Button(newWindow1, text="Add", command=button_command).pack()
 
