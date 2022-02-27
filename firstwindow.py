@@ -148,8 +148,8 @@ def ShowInfoList():
         print( obj.name, obj.ID, obj.height, obj.weight, obj.gender, obj.address, obj.email, obj.phone, sep =' ' )
 
 class Student(Person):
-    def __init__(self, name, ID, height, weight, gender, address, email, phone, subject, credit, score ):
-        super().__init__(name, ID, height, weight, gender, address, email, phone, subject, credit, score)
+    def __init__(self,subject, credit, score ):
+       # super().__init__(name, ID, height, weight, gender, address, email, phone, subject, credit, score)
         self.subject = subject
         self.credit = credit
         self.score = score
@@ -169,6 +169,15 @@ class Student(Person):
         return self.score
     def ClassInfo(self):
         print("subject:{}\n credit:{}\n score:{}".format(self.subject, self.credit, self.score))
+
+
+
+class1=Student("程式設計 (1042393)", "3", "99")
+class2=Student("基礎數學 (1042393)", "3", "99")
+class3=Student("創意思考 (1042393)", "3", "99")
+class1.ClassInfo()
+class2.ClassInfo()
+class3.ClassInfo()
 
 class Teacher(Person):
     def __init__(self, name, ID, height, weight, gender, address, email, phone, degree, major, web_address ):
@@ -192,6 +201,8 @@ btn2.pack(pady = 10)
 btn3 = Button(root,
               text="Show person list",
               command = ShowInfoList)
+
+           
 btn3.pack(pady = 10)
 
 
