@@ -1,3 +1,4 @@
+from re import A
 from tkinter import *
 from tkinter import messagebox
 root = Tk()
@@ -66,6 +67,35 @@ def openNewWindow2():
     newWindow2.title("New Window 2")
     newWindow2.geometry("400x300")
     Label(newWindow2, text="choose which property to change").pack()
+    #
+    entryA = Entry(newWindow2, width = 20)
+    entryA.pack()
+
+    entryB = Entry(newWindow2, width = 20)
+    entryB.pack()
+
+    entryC = Entry(newWindow2, width = 20)
+    entryC.pack()
+
+    entryD = Entry(newWindow2, width = 20)
+    entryD.pack()
+    def button_command2():
+        A = entryA.get()
+        B = entryB.get()
+        C = entryC.get()
+        
+
+       # list.append( Person(text, text2, text3, text4, text5, text6, text7, text8) )
+
+        print("Changed successfully!\nClose this window and click Show person list")
+        return None
+    Button(newWindow2, text="change", command=button_command2).pack()
+    Button(newWindow2, text="Show class info", command=ShowClassInfo).pack()
+
+
+
+
+    #
     btn = Button(newWindow2,
                  text = "Close",
                  command = lambda: newWindowClose(newWindow2))
@@ -172,13 +202,24 @@ class Student(Person):
 
 
 
-class1=Student("程式設計 (1042393)", "3", "99")
-class2=Student("基礎數學 (1042393)", "3", "99")
-class3=Student("創意思考 (1042393)", "3", "99")
-class1.ClassInfo()
-class2.ClassInfo()
-class3.ClassInfo()
+class1=Student("程式設計(1042393)", "3", "99")
+class2=Student("基礎數學(1042393)", "3", "99")
+class3=Student("創意思考(1042393)", "3", "99")
+def ShowClassInfo():
+    class1.ClassInfo()
+    class2.ClassInfo()
+    class3.ClassInfo()
+def ChangeClass1():
 
+    class1.setSubject(A)
+    class1.getSubject()
+def ChangeClass2():
+
+    class2.setSubject(B)
+    class2.getSubject()
+def ChangeCLass3():
+    class3.setSubject(C)
+    class3.getSubject()
 class Teacher(Person):
     def __init__(self, name, ID, height, weight, gender, address, email, phone, degree, major, web_address ):
         super().__init__(name, ID, height, weight, gender, address, email, phone, degree, major, web_address)
